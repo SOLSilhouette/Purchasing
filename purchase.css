@@ -1,0 +1,165 @@
+/* Prince SK ['Silhouette'] DID! */
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body {
+    background-image: url("cybercar.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: fantasy;
+    cursor: default;
+}
+
+fieldset {
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: grey;
+    width: 30%;
+    margin: 100px auto;
+    display: none;
+}
+legend {
+    text-shadow: 0 0 9px black;
+    font-family: courier;
+}
+.form_input {
+    background-color: lightgrey;
+    padding: 5px 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+label {
+    color: black;
+}
+#sub {
+    margin-top: 20px;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#head {
+    padding: 5px;
+    text-align: center;
+    font-family: 'Bruno Ace SC', cursive;
+    letter-spacing: 3px;
+    color: black;
+    text-shadow: 0 0 2px white;
+    border: 2px solid white;
+    border-radius: 100px;
+    background-color: black;
+    padding: 10px 0;
+}
+
+#main {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px black;
+}
+#main::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    background-image: url("cybercar.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(7px);
+    z-index: -1;
+    border-radius: 20px;
+}
+
+#next {
+    text-align: center;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+    padding: 5px 20px;
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: darkblue;
+    display: inline-block;
+    cursor: pointer;
+}
+#next:active, #sub:active {
+    transform: scale(0.96);
+}
+
+figure {
+    display: inline-block;
+    cursor: pointer;
+}
+
+figcaption {
+    text-shadow: 4px 4px 6px black;
+    font-family: courier;
+}
+
+.item_input {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px 0 0 10px;
+    padding: 3px 0;
+    width: 110px;
+    display: none;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 0 10px 10px 0;
+    padding: 3px 10px;
+    display: none;
+}
+button:hover, #sub:hover {
+    color: white;
+    background-color: black;
+}
+button:active {
+    transform: scale(0.96);
+}
+
+.item_img {
+    width: 100%;
+    height: 170px;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid white;
+    box-shadow: 0 0 8px black;
+}
+.item_img:hover {
+    transform: scale(1.04);
+    transition: 0.25s;
+}
+.item_img:active {
+    transform: scale(0.9999);
+}
+
+#cybutter {
+    background-image: url("cyberbutterfly.jpg");
+}
+
+#cyshades {
+    background-image: url("cybershades.png");
+}
+
+#cysilver {
+    background-image: url("cybersilverhand.jpg");
+}
+
+#cyowl {
+    background-image: url("cyberowl.jpg");
+}
