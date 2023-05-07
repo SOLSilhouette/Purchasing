@@ -1,0 +1,102 @@
+<!-- Prince SK ['Silhouette'] DID! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Something</title>
+
+    <link href="purchase.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1 id="head">Silhouette</h1>
+
+    <div id="main">
+        <figure id="cybutter_panel">
+            <div class="item_img" id="cybutter"></div>
+            <figcaption id="cybutter_name">Cyberpunk Butterfly Girl</figcaption>
+            <figcaption id="cybutter_price">Gh¢12.00</figcaption>
+            <input class="item_input" id="cybutter_num" type="number" placeholder="How many?">
+            <button id="cybutter_done">Done</button>
+        </figure>
+
+        <figure id="cyshades_panel">
+            <div class="item_img" id="cyshades"></div>
+            <figcaption id="cyshades_name">Cyberpunk Cool Shades Girl</figcaption>
+            <figcaption id="cyshades_price">Gh¢11.00</figcaption>
+            <input class="item_input" id="cyshades_num" type="number" placeholder="How many?">
+            <button id="cyshades_done">Done</button>
+        </figure>  
+
+        <figure id="cysilver_panel">
+            <div class="item_img" id="cysilver"></div>
+            <figcaption id="cysilver_name">Cyberpunk Johnny Silverhand</figcaption>
+            <figcaption id="cysilver_price">Gh¢13.00</figcaption>
+            <input class="item_input" id="cysilver_num" type="number" placeholder="How many?">
+            <button id="cysilver_done">Done</button>
+        </figure>
+        
+        <figure id="cyowl_panel">
+            <div class="item_img" id="cyowl"></div>
+            <figcaption id="cyowl_name">Cyberpunk Owl Tattoo Girl</figcaption>
+            <figcaption id="cyowl_price">Gh¢13.00</figcaption>
+            <input class="item_input" id="cyowl_num" type="number" placeholder="How many?">
+            <button id="cyowl_done">Done</button>
+        </figure> 
+    </div>
+
+    <h2 id="next">Next</h2>
+
+
+
+    <fieldset id="form">
+        <legend align="center"><h3>Fill this form to complete purchase</h3></legend>
+        <form onsubmit="formsub()" align="center" action="https://formspree.io/f/xwkjaqlk" method="POST">
+            <table cellpadding="7px">
+                <input class="form_input" id="items" type="hidden" name="Your Items" disabled>
+
+                <tr>
+                    <td><label for="name">Name:</label></td>
+    
+                    <td><input class="form_input" id="name" type="text" placeholder="Enter your name" name="Name" required></td>
+                </tr>
+    
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+    
+                    <td><input class="form_input" id="phone" type="tel" placeholder="Enter your phone number" name="Phone Number" maxlength="10" minlength="10" required></td>
+                </tr>
+    
+                <tr>
+                    <td><label for="loc">Loacation:</label></td>
+    
+                    <td><input class="form_input" id="loc" type="text" placeholder="Enter a location for delivery" name="Delivery/Pick Up Location" required></td>
+                </tr>
+    
+                <tr>
+                    <td><label for="mail">E-mail:</label></td>
+    
+                    <td><input class="form_input" id="mail" type="email" placeholder="Enter your email" name="E-mail" required></td>
+                </tr>
+    
+                <tr>
+                    <td><label>Payment Method:</label></td>
+    
+                    <td>
+                        <label>Mobile Money: </label> <input type="radio" id="momo" name="Payment Method" value="Mobile Money" required><br>
+                        <label>On Site: </label><input type="radio" id="site" name="Payment Method" value="On Site" required>
+                    </td>
+                </tr>
+            </table>
+            
+
+            <input id="sub" type="submit" value="Submit">
+        </form>
+    </fieldset>
+
+     <h2 id="refresh">Refresh the Page</h2>
+
+    <script src="purchase.js" type="text/javascript"></script>
+</body>
+</html>
