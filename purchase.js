@@ -9,6 +9,7 @@ document.getElementById("cybutter").addEventListener("click", function() {
         document.getElementById("cybutter").style.transition = "height 0.25s";
         document.getElementById("cybutter").style.height = "170px";
         document.getElementById("cybutter_num").style.display = "none";
+        document.getElementById("cybutter_done").style.borderRadius = "10px";
 
         cybutter_state = false;
     }
@@ -17,17 +18,20 @@ document.getElementById("cybutter").addEventListener("click", function() {
         document.getElementById("cybutter").style.transition = "height 0.25s";
         document.getElementById("cybutter").style.height = "80px";
         document.getElementById("cybutter_num").style.display = "inline-block";
+        document.getElementById("cybutter_done").style.borderRadius = "0 10px 10px 0";
 
         cybutter_state = true;
     }
 });
 
 document.getElementById("cybutter_num").addEventListener("input", function() {
-   if(document.getElementById("cybutter_num").value < 1) {
+   if (document.getElementById("cybutter_num").value < 1) {
+        document.getElementById("cybutter_num").style.borderRadius = "10px";
         document.getElementById("cybutter_done").style.display = "none";
     }
 
     else {
+        document.getElementById("cybutter_num").style.borderRadius = "10px 0 0 10px";
         document.getElementById("cybutter_done").style.display = "inline-block";
     }
 });
@@ -52,6 +56,7 @@ document.getElementById("cyshades").addEventListener("click", function() {
         document.getElementById("cyshades").style.transition = "height 0.25s";
         document.getElementById("cyshades").style.height = "170px";
         document.getElementById("cyshades_num").style.display = "none";
+        document.getElementById("cyshades_done").style.borderRadius = "10px";
 
         cyshades_state = false;
     }
@@ -60,6 +65,7 @@ document.getElementById("cyshades").addEventListener("click", function() {
         document.getElementById("cyshades").style.transition = "height 0.25s";
         document.getElementById("cyshades").style.height = "80px";
         document.getElementById("cyshades_num").style.display = "inline-block";
+        document.getElementById("cyshades_done").style.borderRadius = "0 10px 10px 0";
 
         cyshades_state = true;
     }
@@ -67,10 +73,12 @@ document.getElementById("cyshades").addEventListener("click", function() {
 
 document.getElementById("cyshades_num").addEventListener("input", function() {
    if(document.getElementById("cyshades_num").value < 1) {
+        document.getElementById("cyshades_num").style.borderRadius = "10px";
         document.getElementById("cyshades_done").style.display = "none";
     }
 
     else {
+        document.getElementById("cyshades_num").style.borderRadius = "10px 0 0 10px";
         document.getElementById("cyshades_done").style.display = "inline-block";
     }
 });
@@ -95,6 +103,7 @@ document.getElementById("cysilver").addEventListener("click", function() {
         document.getElementById("cysilver").style.transition = "height 0.25s";
         document.getElementById("cysilver").style.height = "170px";
         document.getElementById("cysilver_num").style.display = "none";
+        document.getElementById("cysilver_done").style.borderRadius = "10px";
 
         cysilver_state = false;
     }
@@ -103,6 +112,7 @@ document.getElementById("cysilver").addEventListener("click", function() {
         document.getElementById("cysilver").style.transition = "height 0.25s";
         document.getElementById("cysilver").style.height = "80px";
         document.getElementById("cysilver_num").style.display = "inline-block";
+        document.getElementById("cysilver_done").style.borderRadius = "0 10px 10px 0";
 
         cysilver_state = true;
     }
@@ -110,10 +120,12 @@ document.getElementById("cysilver").addEventListener("click", function() {
 
 document.getElementById("cysilver_num").addEventListener("input", function() {
    if(document.getElementById("cysilver_num").value < 1) {
+        document.getElementById("cysilver_num").style.borderRadius = "10px";
         document.getElementById("cysilver_done").style.display = "none";
     }
 
     else {
+        document.getElementById("cysilver_num").style.borderRadius = "10px 0 0 10px";
         document.getElementById("cysilver_done").style.display = "inline-block";
     }
 });
@@ -138,6 +150,7 @@ document.getElementById("cyowl").addEventListener("click", function() {
         document.getElementById("cyowl").style.transition = "height 0.25s";
         document.getElementById("cyowl").style.height = "170px";
         document.getElementById("cyowl_num").style.display = "none";
+        document.getElementById("cyowl_done").style.borderRadius = "10px";
 
         cyowl_state = false;
     }
@@ -146,6 +159,7 @@ document.getElementById("cyowl").addEventListener("click", function() {
         document.getElementById("cyowl").style.transition = "height 0.25s";
         document.getElementById("cyowl").style.height = "80px";
         document.getElementById("cyowl_num").style.display = "inline-block";
+        document.getElementById("cyowl_done").style.borderRadius = "0 10px 10px 0";
 
         cyowl_state = true;
     }
@@ -153,10 +167,12 @@ document.getElementById("cyowl").addEventListener("click", function() {
 
 document.getElementById("cyowl_num").addEventListener("input", function() {
    if(document.getElementById("cyowl_num").value < 1) {
+        document.getElementById("cyowl_num").style.borderRadius = "10px";
         document.getElementById("cyowl_done").style.display = "none";
     }
 
     else {
+        document.getElementById("cyowl_num").style.borderRadius = "10px 0 0 10px";
         document.getElementById("cyowl_done").style.display = "inline-block";
     }
 });
@@ -199,7 +215,7 @@ document.getElementById("next").addEventListener("mouseenter", function() {
     
         else {
             document.getElementById("next").style.transition = "margin-left 0.25s";
-            document.getElementById("next").style.marginLeft = "130px";
+            document.getElementById("next").style.marginLeft = "140px";
     
             next_state = true;
         }

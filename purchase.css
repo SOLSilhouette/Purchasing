@@ -71,6 +71,7 @@ label {
     border-radius: 20px;
     margin: 0 auto;
     box-shadow: 0 0 10px black;
+    text-align: center;
 }
 #main::before {
     position: absolute;
@@ -113,12 +114,13 @@ figure {
 figcaption {
     text-shadow: 4px 4px 6px black;
     font-family: courier;
+    text-align: left;
 }
 
 .item_input {
     text-align: center;
     border: 1px solid black;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px;
     padding: 3px 0;
     width: 110px;
     display: none;
@@ -145,7 +147,7 @@ button:active {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 2px solid white;
+    border: 2px solid black;
     box-shadow: 0 0 8px black;
 }
 .item_img:hover {
