@@ -147,16 +147,13 @@ button:active {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 2px solid black;
+    border: 3px solid black;
     box-shadow: 0 0 8px black;
 }
 .item_img:hover {
     transform: scale(1.04);
     transition: 0.25s;
 }
-/*.item_img:active {
-    transform: scale(0.9999);
-}*/
 
 #cybutter {
     background-image: url("cyberbutterfly.jpg");
