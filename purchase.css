@@ -14,13 +14,16 @@ body {
     cursor: default;
 }
 
+#form {
+    display: none;
+    margin: 0 auto;
+}
 fieldset {
     border: 2px solid white;
     border-radius: 10px;
     background-color: grey;
     width: 20%;
     margin: 60px auto;
-    display: none;
 }
 legend {
     text-shadow: 0 0 9px black;
