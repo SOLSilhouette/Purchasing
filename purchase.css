@@ -134,6 +134,7 @@ button {
     border-radius: 0 10px 10px 0;
     padding: 3px 10px;
     display: none;
+    cursor: pointer;
 }
 button:hover, #sub:hover {
     color: white;

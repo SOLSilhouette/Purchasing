@@ -16,7 +16,7 @@
         <figure id="cybutter_panel">
             <div class="item_img" id="cybutter"></div>
             <figcaption id="cybutter_name">Cyberpunk Butterfly Girl</figcaption>
-            <figcaption id="cybutter_price">Gh¢12.00</figcaption>
+            <figcaption id="cybutter_price">GH¢12.00</figcaption>
             <input class="item_input" id="cybutter_num" type="number" placeholder="How many?">
             <button id="cybutter_done">Done</button>
         </figure>
@@ -24,7 +24,7 @@
         <figure id="cyshades_panel">
             <div class="item_img" id="cyshades"></div>
             <figcaption id="cyshades_name">Cyberpunk Cool Shades Girl</figcaption>
-            <figcaption id="cyshades_price">Gh¢11.00</figcaption>
+            <figcaption id="cyshades_price">GH¢11.50</figcaption>
             <input class="item_input" id="cyshades_num" type="number" placeholder="How many?">
             <button id="cyshades_done">Done</button>
         </figure>  
@@ -32,7 +32,7 @@
         <figure id="cysilver_panel">
             <div class="item_img" id="cysilver"></div>
             <figcaption id="cysilver_name">Cyberpunk Johnny Silverhand</figcaption>
-            <figcaption id="cysilver_price">Gh¢13.00</figcaption>
+            <figcaption id="cysilver_price">GH¢13.50</figcaption>
             <input class="item_input" id="cysilver_num" type="number" placeholder="How many?">
             <button id="cysilver_done">Done</button>
         </figure>
@@ -40,7 +40,7 @@
         <figure id="cyowl_panel">
             <div class="item_img" id="cyowl"></div>
             <figcaption id="cyowl_name">Cyberpunk Owl Tattoo Girl</figcaption>
-            <figcaption id="cyowl_price">Gh¢13.00</figcaption>
+            <figcaption id="cyowl_price">GH¢13.00</figcaption>
             <input class="item_input" id="cyowl_num" type="number" placeholder="How many?">
             <button id="cyowl_done">Done</button>
         </figure> 
@@ -53,7 +53,13 @@
             <legend align="center"><h3>Fill this form to complete purchase</h3></legend>
             <form onsubmit="formsub()" align="center" action="https://formspree.io/f/xwkjaqlk" method="POST">
                 <table cellpadding="7px" align="center">
-                    <input class="form_input" id="items" type="hidden" name="Your Items" disabled>
+                    <input class="form_input" id="items" type="hidden" name="Your Items">
+
+                    <tr>
+                        <td><label for="total_cost">Total Cost:</label></td>
+
+                        <td><input class="form_input" id="total_cost" type="text" name="Total Cost" disabled></td>
+                    </tr>
     
                     <tr>
                         <td><label for="name">Name:</label></td>
