@@ -38,7 +38,7 @@ document.querySelector("#cybutter_num").addEventListener("input", function() {
 });
 
 document.querySelector("#cybutter_done").addEventListener("click", function() {
-    var cybutter_list = "[" + document.querySelector("#cybutter_name").innerHTML + "(x" + document.querySelector("#cybutter_num").value + ")" + " for " + document.querySelector("#cybutter_price").innerHTML + "]";
+    var cybutter_list = document.querySelector("#cybutter_name").innerHTML + "(x" + document.querySelector("#cybutter_num").value + ")" + " for " + document.querySelector("#cybutter_price").innerHTML;
     yourItems.push(cybutter_list);
     var cybutter_price = document.querySelector("#cybutter_price").innerHTML.slice(3,-1);
     var cybutter_priceNum = Number(cybutter_price).toFixed(2) * document.querySelector("#cybutter_num").value;
@@ -90,7 +90,7 @@ document.querySelector("#cyshades_num").addEventListener("input", function() {
 });
 
 document.querySelector("#cyshades_done").addEventListener("click", function() {
-    var cyshades_list = "[" + document.querySelector("#cyshades_name").innerHTML + "(x" + document.querySelector("#cyshades_num").value + ")" + " for " + document.querySelector("#cyshades_price").innerHTML + "]";
+    var cyshades_list = document.querySelector("#cyshades_name").innerHTML + "(x" + document.querySelector("#cyshades_num").value + ")" + " for " + document.querySelector("#cyshades_price").innerHTML;
     yourItems.push(cyshades_list);
     var cyshades_price = document.querySelector("#cyshades_price").innerHTML.slice(3,-1);
     var cyshades_priceNum = Number(cyshades_price).toFixed(2) * document.querySelector("#cyshades_num").value;
@@ -142,7 +142,7 @@ document.querySelector("#cysilver_num").addEventListener("input", function() {
 });
 
 document.querySelector("#cysilver_done").addEventListener("click", function() {
-    var cysilver_list = "[" + document.querySelector("#cysilver_name").innerHTML + "(x" + document.querySelector("#cysilver_num").value + ")" + " for " + document.querySelector("#cysilver_price").innerHTML + "]";
+    var cysilver_list = document.querySelector("#cysilver_name").innerHTML + "(x" + document.querySelector("#cysilver_num").value + ")" + " for " + document.querySelector("#cysilver_price").innerHTML;
     yourItems.push(cysilver_list);
     var cysilver_price = document.querySelector("#cysilver_price").innerHTML.slice(3,-1);
     var cysilver_priceNum = Number(cysilver_price).toFixed(2) * document.querySelector("#cysilver_num").value;
@@ -194,7 +194,7 @@ document.querySelector("#cyowl_num").addEventListener("input", function() {
 });
 
 document.querySelector("#cyowl_done").addEventListener("click", function() {
-    var cyowl_list = "[" + document.querySelector("#cyowl_name").innerHTML + "(x" + document.querySelector("#cyowl_num").value + ")" + " for " + document.querySelector("#cyowl_price").innerHTML + "]";
+    var cyowl_list = document.querySelector("#cyowl_name").innerHTML + "(x" + document.querySelector("#cyowl_num").value + ")" + " for " + document.querySelector("#cyowl_price").innerHTML;
     yourItems.push(cyowl_list);
     var cyowl_price = document.querySelector("#cyowl_price").innerHTML.slice(3,-1);
     var cyowl_priceNum = Number(cyowl_price).toFixed(2) * document.querySelector("#cyowl_num").value;
