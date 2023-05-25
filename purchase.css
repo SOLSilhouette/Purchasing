@@ -22,7 +22,7 @@ fieldset {
     border: 2px solid white;
     border-radius: 10px;
     background-color: grey;
-    width: 30%;
+    width: auto;
     margin: 60px auto;
 }
 legend {
@@ -36,6 +36,10 @@ legend {
     border-radius: 5px;
     text-align: center;
 }
+#items {
+    color: black;
+    font-family: courier;
+}
 label {
     color: black;
 }
@@ -45,6 +49,9 @@ label {
     border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
+}
+#checkout {
+    border-radius: 20px;
 }
 
 #refresh {

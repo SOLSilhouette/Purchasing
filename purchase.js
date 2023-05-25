@@ -46,7 +46,7 @@ document.querySelector("#cybutter_done").addEventListener("click", function() {
     document.querySelector("#cybutter_panel").style.display = "none";
 
     console.log(cybutter_list);
-    console.log(yourItems);
+    console.log(yourItems.join("\n"));
     console.log(cybutter_priceNum.toFixed(2));
     console.log("Total Cost = GH¢" + total_cost.toFixed(2));
 });
@@ -98,7 +98,7 @@ document.querySelector("#cyshades_done").addEventListener("click", function() {
     document.querySelector("#cyshades_panel").style.display = "none";
 
     console.log(cyshades_list);
-    console.log(yourItems);
+    console.log(yourItems.join("\n"));
     console.log(cyshades_priceNum.toFixed(2));
     console.log("Total Cost = GH¢" + total_cost.toFixed(2));
 });
@@ -150,7 +150,7 @@ document.querySelector("#cysilver_done").addEventListener("click", function() {
     document.querySelector("#cysilver_panel").style.display = "none";
 
     console.log(cysilver_list);
-    console.log(yourItems);
+    console.log(yourItems.join("\n"));
     console.log(cysilver_priceNum.toFixed(2));
     console.log("Total Cost = GH¢" + total_cost.toFixed(2));
 });
@@ -202,7 +202,7 @@ document.querySelector("#cyowl_done").addEventListener("click", function() {
     document.querySelector("#cyowl_panel").style.display = "none";
 
     console.log(cyowl_list);
-    console.log(yourItems);
+    console.log(yourItems.join("\n"));
     console.log(cyowl_priceNum.toFixed(2));
     console.log("Total Cost = GH¢" + total_cost.toFixed(2));
 });
@@ -219,28 +219,13 @@ document.querySelector("#next").addEventListener("click", function() {
         document.querySelector("#form").style.display = "block";
         document.body.style.backgroundImage = "none";
         document.body.style.backgroundColor = "black";
-        document.querySelector("#items").value = yourItems;
+        document.querySelector("#items").innerHTML = yourItems.join("<br>");
+        document.querySelector("#input_items").value = yourItems.join("\n");
         document.querySelector("#total_cost").value = "GH¢" + total_cost.toFixed(2);
     }
-});
 
-var next_state = false;
-
-document.querySelector("#next").addEventListener("mouseenter", function() {
-    if(yourItems.length < 1) {
-        if(next_state) {
-            document.querySelector("#next").style.transition = "margin-left 0.25s";
-            document.querySelector("#next").style.marginLeft = "10px";
-    
-            next_state = false;
-        }
-    
-        else {
-            document.querySelector("#next").style.transition = "margin-left 0.25s";
-            document.querySelector("#next").style.marginLeft = "140px";
-    
-            next_state = true;
-        }
+    else {
+        alert("You haven't selected anything.");
     }
 });
 //NEXT

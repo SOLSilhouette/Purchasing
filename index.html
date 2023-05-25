@@ -46,51 +46,62 @@
         </figure> 
     </div>
 
-    <h2 id="next">Next</h2>
+    <h2 id="next">Checkout</h2>
 
     <div id="form">
         <fieldset>
             <legend align="center"><h3>Fill this form to complete purchase</h3></legend>
             <form onsubmit="formsub()" align="center" action="https://formspree.io/f/xwkjaqlk" method="POST">
-                <table cellpadding="7px" align="center">
-                    <input class="form_input" id="items" type="hidden" name="Your Items">
 
+                <table id="checkout" align="center" border="4">
                     <tr>
-                        <td><label for="total_cost">Total Cost:</label></td>
-
-                        <td><input class="form_input" id="total_cost" type="text" name="Total Cost" disabled></td>
-                    </tr>
-    
-                    <tr>
-                        <td><label for="name">Name:</label></td>
-        
-                        <td><input class="form_input" id="name" type="text" placeholder="Enter your name" name="Name" required></td>
-                    </tr>
-        
-                    <tr>
-                        <td><label for="phone">Phone Number:</label></td>
-        
-                        <td><input class="form_input" id="phone" type="tel" placeholder="Enter your phone number" name="Phone Number" maxlength="10" minlength="10" required></td>
-                    </tr>
-        
-                    <tr>
-                        <td><label for="loc">Loacation:</label></td>
-        
-                        <td><input class="form_input" id="loc" type="text" placeholder="Enter a location for delivery" name="Delivery/Pick Up Location" required></td>
-                    </tr>
-        
-                    <tr>
-                        <td><label for="mail">E-mail:</label></td>
-        
-                        <td><input class="form_input" id="mail" type="email" placeholder="Enter your email" name="E-mail" required></td>
-                    </tr>
-        
-                    <tr>
-                        <td><label>Payment Method:</label></td>
-        
                         <td>
-                            <label>Mobile Money: </label> <input type="radio" id="momo" name="Payment Method" value="Mobile Money" required><br>
-                            <label>On Site: </label><input type="radio" id="site" name="Payment Method" value="On Site" required>
+                            <p id="items"></p>
+                        </td>
+
+                        <td>
+                            <table cellpadding="7px">
+                                <input class="form_input" id="input_items" type="hidden" name="Your Items">
+            
+                                <tr>
+                                    <td><label for="total_cost">Total Cost:</label></td>
+            
+                                    <td><input class="form_input" id="total_cost" type="text" name="Total Cost" disabled></td>
+                                </tr>
+                
+                                <tr>
+                                    <td><label for="name">Name:</label></td>
+                    
+                                    <td><input class="form_input" id="name" type="text" placeholder="Enter your name" name="Name" required></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td><label for="phone">Phone Number:</label></td>
+                    
+                                    <td><input class="form_input" id="phone" type="tel" placeholder="Enter your phone number" name="Phone Number" maxlength="10" minlength="10" required></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td><label for="loc">Loacation:</label></td>
+                    
+                                    <td><input class="form_input" id="loc" type="text" placeholder="Enter a location for delivery" name="Delivery/Pick Up Location" required></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td><label for="mail">E-mail:</label></td>
+                    
+                                    <td><input class="form_input" id="mail" type="email" placeholder="Enter your email" name="E-mail" required></td>
+                                </tr>
+                    
+                                <tr>
+                                    <td><label>Payment Method:</label></td>
+                    
+                                    <td>
+                                        <label>Mobile Money: </label> <input type="radio" id="momo" name="Payment Method" value="Mobile Money" required><br>
+                                        <label>On Site: </label><input type="radio" id="site" name="Payment Method" value="On Site" required>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                 </table>
