@@ -219,8 +219,8 @@ document.querySelector("#next").addEventListener("click", function() {
         document.querySelector("#form").style.display = "block";
         document.body.style.backgroundImage = "none";
         document.body.style.backgroundColor = "black";
-        document.querySelector("#items").innerHTML = yourItems.join("<br>");
-        document.querySelector("#input_items").value = yourItems.join("\n");
+        document.querySelector("#items").innerHTML = yourItems.join("<br><br>");
+        document.querySelector("#input_items").value = yourItems.join("\n\n");
         document.querySelector("#total_cost").value = "GH¢" + total_cost.toFixed(2);
     }
 
