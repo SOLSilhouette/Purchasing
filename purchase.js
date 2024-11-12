@@ -1,4 +1,7 @@
 //Prince SK ['Silhouette'] DID!
+//import { setPublishableKey, charges } from "stripe";
+//const stripeKey = "pk_test_51NBnjJGnEJQAgpMVDwCXSa4CjmAMnSBfcUOioln3B8Rc27fKzvMetJi8Q8UPMQIbDRiWhfupiCczSZ9G08UYVbOw00EFxgbpiC";
+
 var yourItems = [];
 var total_cost = 0;
 
@@ -38,17 +41,17 @@ document.querySelector("#cybutter_num").addEventListener("input", function() {
 });
 
 document.querySelector("#cybutter_done").addEventListener("click", function() {
-    var cybutter_list = document.querySelector("#cybutter_name").innerHTML + "(x" + document.querySelector("#cybutter_num").value + ")" + " for " + document.querySelector("#cybutter_price").innerHTML;
-    yourItems.push(cybutter_list);
     var cybutter_price = document.querySelector("#cybutter_price").innerHTML.slice(3,-1);
     var cybutter_priceNum = Number(cybutter_price).toFixed(2) * document.querySelector("#cybutter_num").value;
+    var cybutter_list = document.querySelector("#cybutter_name").innerHTML + "(x" + document.querySelector("#cybutter_num").value + ")" + " for " + "GH₵" + cybutter_priceNum.toFixed(2);
+    yourItems.push(cybutter_list);
     total_cost += cybutter_priceNum;
     document.querySelector("#cybutter_panel").style.display = "none";
 
     console.log(cybutter_list);
     console.log(yourItems.join("\n"));
     console.log(cybutter_priceNum.toFixed(2));
-    console.log("Total Cost = GH¢" + total_cost.toFixed(2));
+    console.log("Total Cost = GH₵" + total_cost.toFixed(2));
 });
 //FIRST ITEM
 
@@ -90,17 +93,17 @@ document.querySelector("#cyshades_num").addEventListener("input", function() {
 });
 
 document.querySelector("#cyshades_done").addEventListener("click", function() {
-    var cyshades_list = document.querySelector("#cyshades_name").innerHTML + "(x" + document.querySelector("#cyshades_num").value + ")" + " for " + document.querySelector("#cyshades_price").innerHTML;
-    yourItems.push(cyshades_list);
     var cyshades_price = document.querySelector("#cyshades_price").innerHTML.slice(3,-1);
     var cyshades_priceNum = Number(cyshades_price).toFixed(2) * document.querySelector("#cyshades_num").value;
+    var cyshades_list = document.querySelector("#cyshades_name").innerHTML + "(x" + document.querySelector("#cyshades_num").value + ")" + " for " + "GH₵" + cyshades_priceNum.toFixed(2);
+    yourItems.push(cyshades_list);
     total_cost += cyshades_priceNum;
     document.querySelector("#cyshades_panel").style.display = "none";
 
     console.log(cyshades_list);
     console.log(yourItems.join("\n"));
     console.log(cyshades_priceNum.toFixed(2));
-    console.log("Total Cost = GH¢" + total_cost.toFixed(2));
+    console.log("Total Cost = GH₵" + total_cost.toFixed(2));
 });
 //SECOND ITEM
 
@@ -142,17 +145,17 @@ document.querySelector("#cysilver_num").addEventListener("input", function() {
 });
 
 document.querySelector("#cysilver_done").addEventListener("click", function() {
-    var cysilver_list = document.querySelector("#cysilver_name").innerHTML + "(x" + document.querySelector("#cysilver_num").value + ")" + " for " + document.querySelector("#cysilver_price").innerHTML;
-    yourItems.push(cysilver_list);
     var cysilver_price = document.querySelector("#cysilver_price").innerHTML.slice(3,-1);
     var cysilver_priceNum = Number(cysilver_price).toFixed(2) * document.querySelector("#cysilver_num").value;
+    var cysilver_list = document.querySelector("#cysilver_name").innerHTML + "(x" + document.querySelector("#cysilver_num").value + ")" + " for " + "GH₵" + cysilver_priceNum.toFixed(2);
+    yourItems.push(cysilver_list);
     total_cost += cysilver_priceNum;
     document.querySelector("#cysilver_panel").style.display = "none";
 
     console.log(cysilver_list);
     console.log(yourItems.join("\n"));
     console.log(cysilver_priceNum.toFixed(2));
-    console.log("Total Cost = GH¢" + total_cost.toFixed(2));
+    console.log("Total Cost = GH₵" + total_cost.toFixed(2));
 });
 //THIRD ITEM
 
@@ -194,17 +197,17 @@ document.querySelector("#cyowl_num").addEventListener("input", function() {
 });
 
 document.querySelector("#cyowl_done").addEventListener("click", function() {
-    var cyowl_list = document.querySelector("#cyowl_name").innerHTML + "(x" + document.querySelector("#cyowl_num").value + ")" + " for " + document.querySelector("#cyowl_price").innerHTML;
-    yourItems.push(cyowl_list);
     var cyowl_price = document.querySelector("#cyowl_price").innerHTML.slice(3,-1);
     var cyowl_priceNum = Number(cyowl_price).toFixed(2) * document.querySelector("#cyowl_num").value;
+    var cyowl_list = document.querySelector("#cyowl_name").innerHTML + "(x" + document.querySelector("#cyowl_num").value + ")" + " for " + "GH₵" + cyowl_priceNum.toFixed(2);
+    yourItems.push(cyowl_list);
     total_cost += cyowl_priceNum;
     document.querySelector("#cyowl_panel").style.display = "none";
 
     console.log(cyowl_list);
     console.log(yourItems.join("\n"));
     console.log(cyowl_priceNum.toFixed(2));
-    console.log("Total Cost = GH¢" + total_cost.toFixed(2));
+    console.log("Total Cost = GH₵" + total_cost.toFixed(2));
 });
 //FOURTH ITEM
 
@@ -221,7 +224,8 @@ document.querySelector("#next").addEventListener("click", function() {
         document.body.style.backgroundColor = "black";
         document.querySelector("#items").innerHTML = yourItems.join("<br><br>");
         document.querySelector("#input_items").value = yourItems.join("\n\n");
-        document.querySelector("#total_cost").value = "GH¢" + total_cost.toFixed(2);
+        document.querySelector("#total_cost").value = "GH₵" + total_cost.toFixed(2);
+        document.querySelector("#total_cost").disabled = true;
     }
 
     else {
@@ -230,23 +234,28 @@ document.querySelector("#next").addEventListener("click", function() {
 });
 //NEXT
 
-function formsub() {
-    if (document.querySelector("#site").checked == true) {
+
+
+//SUBMIT
+document.querySelector("form").addEventListener("submit", function() {
+    document.querySelector("#total_cost").disabled = false;
+    document.querySelector("#myform").style.display = "none";
+
+    if (document.querySelector("#cash").checked == true) {
         alert("You'll pay upon delivery");
     }
 
-    else if (document.querySelector("#momo").checked == true) {
-        var momo_num = prompt("Send the money to this MTN number: 0123456789 \n Type the number in the box below, COPY IT and confirm to continue.");
-        
-        while(momo_num != "0123456789") {
-            momo_num = prompt("Send the money to this MTN number: 0123456789 \n Type the number in the box below, COPY IT and confirm to continue. \n Make sure it's the same number in the box before continuing.");
-        }
+    else if (document.querySelector("#online").checked == true) {
+        alert("You'll be paying online.");
     }
 
-    document.querySelector("#total_cost").disabled = false;
-    document.querySelector("#form").style.display = "none";
+    document.querySelector("#myform").addEventListener("submit",
+        setTimeout(function() {
+        document.location.reload();
+    }, 500));
     
-    setTimeout(() => {
+    /* setTimeout(() => {
         document.querySelector("#refresh").style.display = "block";
-    }, 5000);
-}
+    }, 5000); */
+})
+//SUBMIT
