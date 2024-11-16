@@ -22,8 +22,6 @@ fieldset {
     border: 2px solid white;
     border-radius: 10px;
     background-color: grey;
-    width: auto;
-    margin: 60px auto;
 }
 legend {
     text-shadow: 0 0 9px black;
@@ -86,7 +84,7 @@ label {
     background-attachment: fixed;
     filter: blur(7px);
     z-index: -1;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 #checkdiv {
@@ -150,7 +148,7 @@ button:active {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 2px solid black;
+    border: 2px solid white;
     box-shadow: 0 0 8px black;
 }
 .item_img:hover {
