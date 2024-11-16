@@ -213,11 +213,11 @@ document.querySelector("#cyowl_done").addEventListener("click", function() {
 
 
 
-//NEXT
-document.querySelector("#next").addEventListener("click", function() {
+//CHECKOUT
+document.querySelector("#check").addEventListener("click", function() {
     if(yourItems.length > 0) {
         document.querySelector("#main").style.display = "none";
-        document.querySelector("#next").style.display = "none";
+        document.querySelector("#check").style.display = "none";
         document.querySelector("#head").style.display = "none";
         document.querySelector("#form").style.display = "block";
         document.body.style.backgroundImage = "none";
@@ -232,7 +232,7 @@ document.querySelector("#next").addEventListener("click", function() {
         alert("You haven't selected anything.");
     }
 });
-//NEXT
+//CHECKOUT
 
 
 
@@ -253,9 +253,5 @@ document.querySelector("form").addEventListener("submit", function() {
         setTimeout(function() {
         document.location.reload();
     }, 500));
-    
-    /* setTimeout(() => {
-        document.querySelector("#refresh").style.display = "block";
-    }, 5000); */
 })
 //SUBMIT
